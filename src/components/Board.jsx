@@ -1,23 +1,45 @@
 import { Button, Divider, Stack } from "@mui/material";
 import { useState } from "react";
+import { CardsForToday } from "./CardsForToday";
 import { Column } from "./Column";
 
 export function Board() {
   const [cards, setCards] = useState([
-    { id: 1, value: "a", day: 0, ease: 2.5, repetition: 0, lastInterval: 0 },
-    { id: 2, value: "b", day: 2, ease: 2.5, repetition: 0, lastInterval: 0 },
-    { id: 3, value: "c", day: 2, ease: 2.5, repetition: 0, lastInterval: 0 },
+    {
+      id: 1,
+      value: "apple",
+      currentDay: 0,
+      ease: 2.5,
+      repetition: 0,
+      lastInterval: 0,
+    },
+    {
+      id: 2,
+      value: "banana",
+      currentDay: 2,
+      ease: 2.5,
+      repetition: 0,
+      lastInterval: 0,
+    },
+    {
+      id: 3,
+      value: "carrot",
+      currentDay: 2,
+      ease: 2.5,
+      repetition: 0,
+      lastInterval: 0,
+    },
   ]);
 
-  function updateCard(cardId, newDay, newEase, newRepetition) {
+  function updateCard({ cardId, newInterval, newEase, newRepetition }) {
     setCards(
       cards.map((card) =>
         card.id === cardId
           ? {
               ...card,
               ease: newEase,
-              day: newDay - 1,
-              lastInterval: newDay - 1,
+              currentDay: newInterval,
+              lastInterval: newInterval,
               repetition: newRepetition,
             }
           : card
@@ -26,10 +48,10 @@ export function Board() {
   }
 
   const columns = cards.reduce((acc, card) => {
-    while (card.day >= acc.length) {
+    while (card.currentDay >= acc.length) {
       acc.push([]);
     }
-    acc[card.day].push(card);
+    acc[card.currentDay].push(card);
     return acc;
   }, []);
 
@@ -39,28 +61,27 @@ export function Board() {
     setCards(
       cards.map((card) => ({
         ...card,
-        day: Math.max(0, card.day - 1),
+        currentDay: Math.max(0, card.currentDay - 1),
       }))
     );
   }
 
   return (
-    <Stack gap={2}>
+    <Stack gap={1}>
       <Stack alignItems="start">
         <Button variant="contained" onClick={goNextDay}>
           Next Day
         </Button>
       </Stack>
       <Divider />
+      <Stack direction={"row"}>
+        <CardsForToday cards={columns.at(0)} onCardMove={updateCard} />
+      </Stack>
+      <Divider />
       <Stack direction="row" gap={2} flexWrap="wrap">
-        {columns.map((column, index) => (
+        {columns.slice(1).map((column, index) => (
           <>
-            <Column
-              key={index}
-              index={index}
-              column={column}
-              onCardMove={updateCard}
-            />
+            <Column key={index} index={index} column={column} />
             <Divider orientation="vertical" flexItem />
           </>
         ))}

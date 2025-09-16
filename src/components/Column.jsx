@@ -1,13 +1,18 @@
 import { Stack, Typography } from "@mui/material";
-import { Item } from "./Item";
+import { CardItem } from "./CardItem";
 
-export function Column({ column, index, onCardMove }) {
+export function Column({ column, index }) {
   return (
-    <Stack width={150} gap={1} flexShrink={0}>
-      <Typography variant="h6">Day {index + 1}</Typography>
-      {column.map((item) => (
-        <Item key={item.id} item={item} onCardMove={onCardMove} />
-      ))}
+    <Stack flexShrink={0} minWidth={80}>
+      <Typography variant="overline">
+        In {index + 1} {index === 0 ? "Day" : "Days"} ({column.length}
+        {column.length ? (column.length === 1 ? " Card" : " Cards") : ""})
+      </Typography>
+      <Stack gap={1}>
+        {column.map((item) => (
+          <CardItem key={item.id} item={item} active={false} />
+        ))}
+      </Stack>
     </Stack>
   );
 }
