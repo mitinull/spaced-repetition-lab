@@ -10,14 +10,14 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-export function CardItem({ item, onCardMove, active }) {
+export function CardSM2({ card, onCardMove, active }) {
   const [newInterval, setNewInterval] = useState("");
   const [newEase, setNewEase] = useState("");
   const [newRepetition, setNewRepetition] = useState("");
 
   const handleSubmit = () => {
     onCardMove({
-      cardId: item.id,
+      cardId: card.id,
       newEase: +newEase,
       newInterval: +newInterval,
       newRepetition: +newRepetition,
@@ -25,36 +25,36 @@ export function CardItem({ item, onCardMove, active }) {
   };
 
   function handleSuperMemo(quality) {
-    if (item.repetition === 0 || quality < 3) {
+    if (card.repetition === 0 || quality < 3) {
       // I(1):=1
       setNewInterval(1);
-    } else if (item.repetition === 1) {
+    } else if (card.repetition === 1) {
       // I(2):=6
       setNewInterval(6);
     } else {
       // for n>2: I(n):=I(n-1)*EF
-      setNewInterval(Math.floor(item.lastInterval * item.ease));
+      setNewInterval(Math.floor(card.lastInterval * card.ease));
     }
 
     // EF':=EF-0.8+0.28*q-0.02*q*q
-    const ef = item.ease - 0.8 + 0.28 * quality - 0.02 * quality * quality;
+    const ef = card.ease - 0.8 + 0.28 * quality - 0.02 * quality * quality;
     setNewEase(Math.max(ef, 1.3)); // ef should not be less that 1.3
 
     if (quality < 3) {
       setNewRepetition(0);
     } else {
-      setNewRepetition(item.repetition + 1);
+      setNewRepetition(card.repetition + 1);
     }
   }
 
   return (
     <Paper sx={{ p: 1, minWidth: 100 }}>
       {!active ? (
-        <CardInfo item={item} />
+        <CardInfo card={card} />
       ) : (
         <Stack gap={1}>
           <Stack direction="row" gap={1}>
-            <CardInfo item={item} />
+            <CardInfo card={card} />
             <Divider flexItem orientation="vertical" />
             <Stack gap={1.5} flex={1}>
               <StyledTextField
@@ -120,16 +120,16 @@ const StyledTextField = styled(TextField)({
   "& .MuiFormLabel-root": { fontSize: 12, padding: 0, lineHeight: 1 },
 });
 
-function CardInfo({ item }) {
+function CardInfo({ card }) {
   return (
     <Stack gap={1} flex={1}>
-      <Typography variant="h5">{item.value}</Typography>
+      <Typography variant="h5">{card.value}</Typography>
       <Divider />
       <Stack>
-        <Typography variant="caption">repetition: {item.repetition}</Typography>
-        <Typography variant="caption">ease: {item.ease.toFixed(2)}</Typography>
+        <Typography variant="caption">repetition: {card.repetition}</Typography>
+        <Typography variant="caption">ease: {card.ease.toFixed(2)}</Typography>
         <Typography variant="caption">
-          last interval: {item.lastInterval}
+          last interval: {card.lastInterval}
         </Typography>
       </Stack>
     </Stack>

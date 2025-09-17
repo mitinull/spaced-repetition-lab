@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import { CardItem } from "./CardItem";
+import { CardSM2 } from "./CardSM2";
 
 export function Column({ column, index }) {
   return (
@@ -9,8 +9,8 @@ export function Column({ column, index }) {
         {column.length ? (column.length === 1 ? " Card" : " Cards") : ""})
       </Typography>
       <Stack gap={1}>
-        {column.map((item) => (
-          <CardItem key={item.id} item={item} active={false} />
+        {column.map((card) => (
+          <CardSM2 key={card.id} card={card} active={false} />
         ))}
       </Stack>
     </Stack>

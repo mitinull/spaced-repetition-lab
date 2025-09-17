@@ -1,9 +1,17 @@
-import { Button, Divider, Stack } from "@mui/material";
-import { useState } from "react";
+import {
+  Button,
+  Divider,
+  Stack,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@mui/material";
+import { Fragment, useState } from "react";
 import { CardsForToday } from "./CardsForToday";
 import { Column } from "./Column";
+import { CardSM2 } from "./CardSM2";
 
 export function Board() {
+  const [algorithm, setAlgorithm] = useState("Leitner");
   const [cards, setCards] = useState([
     {
       id: 1,
@@ -31,7 +39,7 @@ export function Board() {
     },
   ]);
 
-  function updateCard({ cardId, newInterval, newEase, newRepetition }) {
+  function updateCardSM2({ cardId, newInterval, newEase, newRepetition }) {
     setCards(
       cards.map((card) =>
         card.id === cardId
@@ -55,8 +63,6 @@ export function Board() {
     return acc;
   }, []);
 
-  console.log({ columns });
-
   function goNextDay() {
     setCards(
       cards.map((card) => ({
@@ -68,22 +74,38 @@ export function Board() {
 
   return (
     <Stack gap={1}>
-      <Stack alignItems="start">
+      <Stack alignItems="start" direction="row" gap={1}>
         <Button variant="contained" onClick={goNextDay}>
           Next Day
         </Button>
+        <ToggleButtonGroup
+          exclusive
+          size="small"
+          color="primary"
+          variant="contained"
+          value={algorithm}
+          onChange={(_, value) => setAlgorithm(value)}
+        >
+          <ToggleButton value="Leitner">Leitner</ToggleButton>
+          <ToggleButton value="SM-2">SM-2</ToggleButton>
+        </ToggleButtonGroup>
       </Stack>
       <Divider />
       <Stack direction={"row"}>
-        <CardsForToday cards={columns.at(0)} onCardMove={updateCard} />
+        <CardsForToday
+          cards={columns.at(0)}
+          cardComponent={(props) => (
+            <CardSM2 {...props} onCardMove={updateCardSM2} />
+          )}
+        />
       </Stack>
       <Divider />
       <Stack direction="row" gap={2} flexWrap="wrap">
         {columns.slice(1).map((column, index) => (
-          <>
-            <Column key={index} index={index} column={column} />
+          <Fragment key={index}>
+            <Column index={index} column={column} />
             <Divider orientation="vertical" flexItem />
-          </>
+          </Fragment>
         ))}
       </Stack>
     </Stack>

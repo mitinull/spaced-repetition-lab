@@ -1,7 +1,6 @@
 import { Stack, Typography } from "@mui/material";
-import { CardItem } from "./CardItem";
 
-export function CardsForToday({ cards, onCardMove }) {
+export function CardsForToday({ cards, cardComponent }) {
   return (
     <Stack>
       <Stack>
@@ -11,14 +10,10 @@ export function CardsForToday({ cards, onCardMove }) {
         </Typography>
       </Stack>
       <Stack direction="row" gap={1}>
-        {cards.map((card) => (
-          <CardItem
-            key={card.id}
-            item={card}
-            active={true}
-            onCardMove={onCardMove}
-          />
-        ))}
+        {cards.map((card) => {
+          const Component = cardComponent;
+          return <Component key={card.id} card={card} active={true} />;
+        })}
       </Stack>
     </Stack>
   );
