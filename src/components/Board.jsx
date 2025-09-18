@@ -160,5 +160,7 @@ export function Board() {
 - Add "Reset" button
 - Add button "Add Card"
 - Add "Add X card everyday" input
-- Add inputs for "Move X days forward with random weighted selection (.9 correct or .5 correct etc.)"
+- Add inputs for "Move X days forward
+  with random weighted selection (.9 correct or .5 correct etc.)
+  with M max reviews per day"
 */
