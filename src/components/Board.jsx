@@ -154,6 +154,7 @@ export function Board() {
 }
 
 /* TODO:
+- Add day number
 - Add data generator
 - Add local storage
 - Add "Reset" button
