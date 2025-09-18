@@ -12,7 +12,7 @@ export function CardsForToday({ cards, cardComponent }) {
       <Stack direction="row" gap={1}>
         {cards.map((card) => {
           const Component = cardComponent;
-          return <Component key={card.id} card={card} active={true} />;
+          return <Component key={card.id} card={card} editable={true} />;
         })}
       </Stack>
     </Stack>
