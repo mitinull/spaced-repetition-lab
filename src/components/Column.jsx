@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { CardSM2 } from "./CardSM2";
 
-export function Column({ column, index }) {
+export function Column({ column, index, cardComponent }) {
   return (
     <Stack flexShrink={0} minWidth={80}>
       <Typography variant="overline">
@@ -9,9 +9,10 @@ export function Column({ column, index }) {
         {column.length ? (column.length === 1 ? " Card" : " Cards") : ""})
       </Typography>
       <Stack gap={1}>
-        {column.map((card) => (
-          <CardSM2 key={card.id} card={card} active={false} />
-        ))}
+        {column.map((card) => {
+          const Component = cardComponent;
+          return <Component key={card.id} card={card} editable={false} />;
+        })}
       </Stack>
     </Stack>
   );
