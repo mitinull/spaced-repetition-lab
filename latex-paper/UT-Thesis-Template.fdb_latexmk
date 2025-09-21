@@ -1,12 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1758297465.76747 "UT-Thesis-Template.xdv" "UT-Thesis-Template.pdf" "UT-Thesis-Template" 1758297466.12792 0
-  "UT-Thesis-Template.xdv" 1758297465.72075 110624 38a4e443a111a48eb071a0d1ae41afe6 "xelatex"
+["xdvipdfmx"] 1758447032.0813 "UT-Thesis-Template.xdv" "UT-Thesis-Template.pdf" "UT-Thesis-Template" 1758447032.93381 0
+  "UT-Thesis-Template.xdv" 1758447032.00631 261900 0eaeaf5d345301c909e769bf571175f7 "xelatex"
   (generated)
   "UT-Thesis-Template.pdf"
   (rewritten before read)
-["xelatex"] 1758297464.7598 "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" "UT-Thesis-Template.xdv" "UT-Thesis-Template" 1758297466.12696 0
+["xelatex"] 1758447030.27628 "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" "UT-Thesis-Template.xdv" "UT-Thesis-Template" 1758447032.93249 0
   "/etc/texmf/web2c/texmf.cnf" 1758270300.32528 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" 1758297464.57075 24538 0baaf45223e59d28ebb852d6087beea6 ""
+  "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" 1758447029.30598 48224 bca35d488eb426ac8cfc3382ecabf14f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -83,6 +83,10 @@
   "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def" 1704491087 31815 935a376385ab1feff82e3d2187c4f47a ""
   "/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty" 1705955748 6565 cfd9fd0a1d5f5ad985151778771ff7a9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1696969620 9327 c30c00c0072edba199ede5889311aaa9 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg" 1677530001 1829 d8258b7d94f5f955e70c623e525f9f45 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty" 1677530001 80947 75a96bb4c9f40ae31d54a01d924df2ff ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty" 1677530001 205154 31132370016e8c97e49bc3862419679b ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty" 1677530001 77021 d05e9115c67855816136d82929db8892 ""
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
@@ -98,10 +102,12 @@
   "/usr/share/texlive/texmf-dist/tex/xelatex/bidi/graphicx-xetex-bidi.def" 1691006845 5708 dcfcd83a4f94ddd5921863ed6819c0e9 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/bidi/hyperref-xetex-bidi.def" 1691006845 17862 8ac7d60fd1a87cea4757600870b69f3b ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def" 1691006845 39655 b4bf4d1fddb8bbff63359ac448ef3867 ""
+  "/usr/share/texlive/texmf-dist/tex/xelatex/bidi/listings-xetex-bidi.def" 1691006845 5241 7def146187ac86e0cf8dbbae9c2bc4a4 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def" 1691006845 21642 59d97e7a4ba46d9f41be0c5d78fca2e2 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/bidi/report-xetex-bidi.def" 1691006845 7981 c4952796dd19f423ca7e250e46983148 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/xepersian/footnote-xepersian.def" 1693430533 2007 11df7765476170033c063883ce212022 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/xepersian/hyperref-xepersian.def" 1693430533 3522 3e1133fa9d0adddb19566020e6c43ecf ""
+  "/usr/share/texlive/texmf-dist/tex/xelatex/xepersian/listings-xepersian.def" 1693430533 1903 b0ab7e91edebaecc70142404655ebebd ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def" 1693430533 4430 1b5cdf4c11fa125bad8ac26510a41d16 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/xepersian/report-xepersian.def" 1693430533 1962 227025274e392feb9e49d867451dd856 ""
   "/usr/share/texlive/texmf-dist/tex/xelatex/xepersian/url-xepersian.def" 1693430533 1900 82232e172f2658061ee2cd3d48153ccf ""
@@ -112,12 +118,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1758272573 10843187 c192d38250267f7cd611fdc255184dd2 ""
   "UT-Logo.pdf" 1758296729.17113 8756 c8762748e2dd39f1ad41baa67f138723 ""
-  "UT-Thesis-Template.aux" 1758297465.72075 4943 fb5d37bf855c1915fa7e96c4722ecfa6 "xelatex"
-  "UT-Thesis-Template.out" 1758297465.72075 3376 53fe1feaca92746cf261fdf1991d6061 "xelatex"
-  "UT-Thesis-Template.tex" 1758297464.57075 24538 0baaf45223e59d28ebb852d6087beea6 ""
-  "UT-Thesis-Template.toc" 1758297465.72075 1603 463925875c1f0760ab91fdfcb0cf9f4d "xelatex"
+  "UT-Thesis-Template.aux" 1758447031.99649 7579 2219a62fed76c3f38716472cffbbc039 "xelatex"
+  "UT-Thesis-Template.out" 1758447032.00631 5591 5f92f343041420519c17b329c958bc3e "xelatex"
+  "UT-Thesis-Template.tex" 1758447029.30598 48224 bca35d488eb426ac8cfc3382ecabf14f ""
+  "UT-Thesis-Template.toc" 1758447032.00631 2574 792518d1c2f40a3c6da6a561d444c19d "xelatex"
   "images/forgetting-curve-with-repetition.png" 1758296729.17113 86724 fd81f2adefba817dbe18e227c1ceeb94 ""
   "images/forgetting-curve.png" 1758296729.17113 62819 b3a108c4cbe8356423d30f472e8aee73 ""
+  "images/leitner-overview.png" 1758352734.32007 428053 77f3dd6a8fac20692f3d25bda0688baa ""
+  "images/three-group-repetition.png" 1758350473.51674 23925 6e21c7724a8379872bfe91ac3eba6f9b ""
   (generated)
   "UT-Thesis-Template.aux"
   "UT-Thesis-Template.log"
