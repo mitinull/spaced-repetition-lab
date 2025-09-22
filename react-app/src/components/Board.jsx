@@ -6,6 +6,7 @@ import {
   MenuItem,
   InputLabel,
   FormControl,
+  Typography,
 } from "@mui/material";
 import { Fragment, useCallback, useState } from "react";
 import { CardsForToday } from "./CardsForToday";
@@ -14,6 +15,7 @@ import { CardSM2 } from "./CardSM2";
 import { CardLeitner } from "./CardLeitner";
 
 export function Board() {
+  const [day, setDay] = useState(0);
   const [algorithm, setAlgorithm] = useState("leitner");
   const [cards, setCards] = useState([
     {
@@ -80,6 +82,7 @@ export function Board() {
   );
 
   function goNextDay() {
+    setDay((prev) => prev + 1);
     setCards(
       cards.map((card) => ({
         ...card,
@@ -116,10 +119,9 @@ export function Board() {
 
   return (
     <Stack px={1.5} py={2} gap={1}>
-      <Stack alignItems="start" direction="row" gap={1}>
-        <Button variant="contained" onClick={goNextDay}>
-          Next Day
-        </Button>
+      <Stack alignItems="start" direction="row" gap={1.5}>
+        <Typography variant="h5">Spaced Repetition Lab</Typography>
+        <Divider orientation="vertical" flexItem />
         <FormControl size="small">
           <InputLabel>Algorithm</InputLabel>
           <Select
@@ -131,6 +133,9 @@ export function Board() {
             <MenuItem value="sm2">SM-2</MenuItem>
           </Select>
         </FormControl>
+        <Button variant="contained" onClick={goNextDay}>
+          (Day: {day}) Next Day
+        </Button>
       </Stack>
       <Divider />
       <Stack direction={"row"}>
@@ -154,7 +159,6 @@ export function Board() {
 }
 
 /* TODO:
-- Add day number
 - Add data generator
 - Add local storage
 - Add "Reset" button
