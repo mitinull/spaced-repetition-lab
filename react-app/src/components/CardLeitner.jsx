@@ -34,8 +34,8 @@ export function CardLeitner({ card, onCardMove, editable }) {
 
   function handleLeitner(quality) {
     if (quality === 0) {
-      setNewBox(0);
-      setNewInterval(1);
+      setNewBox("0");
+      setNewInterval("1");
     }
 
     if (quality === 1) {

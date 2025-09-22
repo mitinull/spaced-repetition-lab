@@ -59,7 +59,7 @@ export function CardSM2({ card, onCardMove, editable }) {
     setNewEase(Math.max(ef, 1.3)); // ef should not be less that 1.3
 
     if (quality < 3) {
-      setNewRepetition(0);
+      setNewRepetition("0");
     } else {
       setNewRepetition(card.reviewStatus.sm2.repetition + 1);
     }

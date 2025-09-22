@@ -13,8 +13,8 @@ export function CardsForToday({ cards, cardComponent }) {
         {cards.map((card) => {
           const Component = cardComponent;
           return (
-            <Stack flexShrink={0}>
-              <Component key={card.id} card={card} editable={true} />
+            <Stack flexShrink={0} key={card.id}>
+              <Component card={card} editable={true} />
             </Stack>
           );
         })}
