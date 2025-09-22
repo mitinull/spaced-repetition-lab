@@ -1,7 +1,9 @@
+import { Loop } from "@mui/icons-material";
 import {
   Button,
   ButtonGroup,
   Divider,
+  IconButton,
   Paper,
   Stack,
   styled,
@@ -135,9 +137,16 @@ const StyledTextField = styled(TextField)({
 });
 
 function CardInfoSM2({ card }) {
+  const [showBack, setShowBack] = useState(false);
+
   return (
     <Stack gap={1} flex={1}>
-      <Typography variant="h5">{card.value}</Typography>
+      <Typography variant="h5">
+        {!showBack ? card.value : card.back}
+        <IconButton onClick={() => setShowBack((prev) => !prev)}>
+          <Loop />
+        </IconButton>
+      </Typography>
       <Divider />
       <Stack>
         <Typography variant="caption">

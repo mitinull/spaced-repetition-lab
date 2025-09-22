@@ -9,10 +9,14 @@ export function CardsForToday({ cards, cardComponent }) {
           {cards.length === 1 ? "Card" : "Cards"})
         </Typography>
       </Stack>
-      <Stack direction="row" gap={1}>
+      <Stack direction="row" gap={1} overflow="auto" pb={0.5}>
         {cards.map((card) => {
           const Component = cardComponent;
-          return <Component key={card.id} card={card} editable={true} />;
+          return (
+            <Stack flexShrink={0}>
+              <Component key={card.id} card={card} editable={true} />
+            </Stack>
+          );
         })}
       </Stack>
     </Stack>

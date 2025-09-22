@@ -1,4 +1,4 @@
-import { Check, Close } from "@mui/icons-material";
+import { Check, Close, Loop } from "@mui/icons-material";
 import {
   Button,
   ButtonGroup,
@@ -97,9 +97,17 @@ const StyledTextField = styled(TextField)({
 });
 
 function CardInfoLeitner({ card }) {
+  const [showBack, setShowBack] = useState(false);
+
   return (
     <Stack gap={1} flex={1}>
-      <Typography variant="h5">{card.value}</Typography>
+      <Typography variant="h5">
+        {!showBack ? card.value : card.back}
+        <IconButton onClick={() => setShowBack((prev) => !prev)}>
+          <Loop />
+        </IconButton>
+      </Typography>
+
       <Divider />
       <Stack>
         <Typography variant="caption">

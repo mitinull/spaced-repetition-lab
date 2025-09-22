@@ -13,62 +13,16 @@ import { CardsForToday } from "./CardsForToday";
 import { Column } from "./Column";
 import { CardSM2 } from "./CardSM2";
 import { CardLeitner } from "./CardLeitner";
+import { Add } from "@mui/icons-material";
+import { cardsData } from "../data";
+import { v4 as uuidv4 } from "uuid";
 
 export function Board() {
-  const [day, setDay] = useState(0);
+  const [day, setDay] = useState(1);
   const [algorithm, setAlgorithm] = useState("leitner");
   const [cards, setCards] = useState([
-    {
-      id: 1,
-      value: "apple",
-      reviewStatus: {
-        leitner: {
-          box: 0,
-          reviewDay: 0,
-          lastInterval: 0,
-        },
-        sm2: {
-          ease: 2.5,
-          reviewDay: 0,
-          repetition: 0,
-          lastInterval: 0,
-        },
-      },
-    },
-    {
-      id: 2,
-      value: "banana",
-      reviewStatus: {
-        leitner: {
-          box: 0,
-          reviewDay: 0,
-          lastInterval: 0,
-        },
-        sm2: {
-          ease: 2.5,
-          reviewDay: 0,
-          repetition: 0,
-          lastInterval: 0,
-        },
-      },
-    },
-    {
-      id: 3,
-      value: "carrot",
-      reviewStatus: {
-        leitner: {
-          box: 0,
-          reviewDay: 0,
-          lastInterval: 0,
-        },
-        sm2: {
-          ease: 2.5,
-          reviewDay: 0,
-          repetition: 0,
-          lastInterval: 0,
-        },
-      },
-    },
+    createCard({ en: "Apple", fa: "سیب" }),
+    createCard({ en: "Futile", fa: "بیهوده" }),
   ]);
 
   const updateCard = useCallback(
@@ -95,6 +49,20 @@ export function Board() {
         },
       }))
     );
+  }
+
+  function addNewCard() {
+    if (cardsData.length === 0) {
+      return null; // Return null if array is empty
+    }
+
+    // Get random index
+    const randomIndex = Math.floor(Math.random() * cardsData.length);
+
+    // Remove the item at random index and return it
+    const cardData = cardsData.splice(randomIndex, 1)[0];
+
+    setCards([...cards, createCard(cardData)]);
   }
 
   const columns = cards.reduce((acc, card) => {
@@ -136,6 +104,14 @@ export function Board() {
         <Button variant="contained" onClick={goNextDay}>
           (Day: {day}) Next Day
         </Button>
+        <Button
+          variant="contained"
+          color="success"
+          startIcon={<Add />}
+          onClick={addNewCard}
+        >
+          Add Card
+        </Button>
       </Stack>
       <Divider />
       <Stack direction={"row"}>
@@ -158,11 +134,30 @@ export function Board() {
   );
 }
 
+function createCard(data) {
+  return {
+    id: uuidv4(),
+    value: data.en,
+    back: data.fa,
+    reviewStatus: {
+      leitner: {
+        box: 0,
+        reviewDay: 0,
+        lastInterval: 0,
+      },
+      sm2: {
+        ease: 2.5,
+        reviewDay: 0,
+        repetition: 0,
+        lastInterval: 0,
+      },
+    },
+  };
+}
+
 /* TODO:
-- Add data generator
 - Add local storage
 - Add "Reset" button
-- Add button "Add Card"
 - Add "Add X card everyday" input
 - Add inputs for "Move X days forward
   with random weighted selection (.9 correct or .5 correct etc.)
