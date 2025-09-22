@@ -18,15 +18,17 @@ export function CardSM2({ card, onCardMove, editable }) {
   const [newRepetition, setNewRepetition] = useState("");
 
   const handleSubmit = () => {
+    if (!newInterval || !newEase || !newRepetition) return;
+
     onCardMove({
       id: card.id,
       reviewStatus: {
         ...card.reviewStatus,
         sm2: {
           ease: +newEase,
-          interval: +newInterval,
           reviewDay: +newInterval,
           repetition: +newRepetition,
+          lastInterval: +newInterval,
         },
       },
     });

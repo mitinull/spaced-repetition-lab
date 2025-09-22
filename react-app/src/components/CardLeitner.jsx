@@ -17,6 +17,8 @@ export function CardLeitner({ card, onCardMove, editable }) {
   const [newInterval, setNewInterval] = useState("");
 
   const handleSubmit = () => {
+    if (!newBox || !newInterval) return;
+
     onCardMove({
       id: card.id,
       reviewStatus: {
