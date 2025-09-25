@@ -1,12 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1758692117.39191 "UT-Thesis-Template.xdv" "UT-Thesis-Template.pdf" "UT-Thesis-Template" 1758692118.17369 0
-  "UT-Thesis-Template.xdv" 1758692117.33936 309792 8c5f876d516e14b62406438a9f0b3164 "xelatex"
+["xdvipdfmx"] 1758812799.84406 "UT-Thesis-Template.xdv" "UT-Thesis-Template.pdf" "UT-Thesis-Template" 1758812800.55241 0
+  "UT-Thesis-Template.xdv" 1758812799.79308 318788 346108ab2d24e5ef7a81642b91d82e98 "xelatex"
   (generated)
   "UT-Thesis-Template.pdf"
   (rewritten before read)
-["xelatex"] 1758692116.02802 "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" "UT-Thesis-Template.xdv" "UT-Thesis-Template" 1758692118.17225 0
+["xelatex"] 1758812798.61979 "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" "UT-Thesis-Template.xdv" "UT-Thesis-Template" 1758812800.55086 0
   "/etc/texmf/web2c/texmf.cnf" 1758270300.32528 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" 1758692088.60184 60508 60d268fc9831184633d88c60487c5daf ""
+  "/home/mohammad/projects/ut-thesis/spaced-repetition-lab/latex-paper/UT-Thesis-Template.tex" 1758812798.41866 62081 fd0d9dee1c78cb75e7c93348ef48e0db ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -118,10 +118,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1758272573 10843187 c192d38250267f7cd611fdc255184dd2 ""
   "UT-Logo.pdf" 1758296729.17113 8756 c8762748e2dd39f1ad41baa67f138723 ""
-  "UT-Thesis-Template.aux" 1758692117.3294 8746 cd4b2aa9837e0aa48df79efeb3238249 "xelatex"
-  "UT-Thesis-Template.out" 1758692117.33936 5127 39a75d02fb2b4530b920b4710d6063a7 "xelatex"
-  "UT-Thesis-Template.tex" 1758692088.60184 60508 60d268fc9831184633d88c60487c5daf ""
-  "UT-Thesis-Template.toc" 1758692117.33936 3029 77f070c2054a8258a7df2114b476629f "xelatex"
+  "UT-Thesis-Template.aux" 1758812799.79308 8878 c16010a0056bd44f5769bf8fd2af4cd0 "xelatex"
+  "UT-Thesis-Template.out" 1758812799.79308 5127 39a75d02fb2b4530b920b4710d6063a7 "xelatex"
+  "UT-Thesis-Template.tex" 1758812798.41866 62081 fd0d9dee1c78cb75e7c93348ef48e0db ""
+  "UT-Thesis-Template.toc" 1758812799.79308 3031 deb3ff47cf2f9809469ff7115fb973a3 "xelatex"
   "images/forgetting-curve-with-repetition.png" 1758296729.17113 86724 fd81f2adefba817dbe18e227c1ceeb94 ""
   "images/forgetting-curve.png" 1758296729.17113 62819 b3a108c4cbe8356423d30f472e8aee73 ""
   "images/leitner-overview.png" 1758352734.32007 428053 77f3dd6a8fac20692f3d25bda0688baa ""
