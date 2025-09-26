@@ -258,9 +258,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT ./images/forgetting-curve.png
 INPUT ./images/forgetting-curve.png
 INPUT ./images/forgetting-curve.png
-INPUT ./images/forgetting-curve-with-repetition.png
-INPUT ./images/forgetting-curve-with-repetition.png
-INPUT ./images/forgetting-curve-with-repetition.png
 INPUT ./images/three-group-repetition.png
 INPUT ./images/three-group-repetition.png
 INPUT ./images/three-group-repetition.png
